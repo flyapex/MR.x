@@ -8,7 +8,7 @@ class NavBarLogo extends StatelessWidget {
     return SizedBox(
       height: size,
       width: size,
-      child: Image.asset('assets/logofull.png'),
+      child: Image.asset('assets/logo.png'),
     );
   }
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mrletweb/view/home/home_contain_desktop.dart';
 import 'package:mrletweb/view/home/home_contain_mobile.dart';
-import 'package:mrletweb/view/home/home_contain_tablate.dart';
 import 'package:mrletweb/view/widgets/navigation_drawer/navigation_drawer.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -24,7 +23,7 @@ class _HomeViweState extends State<HomeViwe> {
               child: ScreenTypeLayout(
                 mobile: HomeContentMobile(),
                 desktop: HomeContentDesktop(),
-                tablet: HomeContenttablate(),
+                // tablet: HomeContenttablate(),
               ),
             )
           ],
