@@ -2,11 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:mrletweb/constants/app_colors.dart';
 import 'package:mrletweb/view/widgets/navigation_bar/navbar_logo.dart';
 
-class TopAds extends StatelessWidget {
+class TopAds extends StatefulWidget {
+  @override
+  _TopAdsState createState() => _TopAdsState();
+}
+
+class _TopAdsState extends State<TopAds> {
+  double hight = 65;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 65,
+      height: hight,
       width: double.infinity,
       child: Expanded(
         child: Container(
@@ -19,10 +25,17 @@ class TopAds extends StatelessWidget {
                 Expanded(
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.cancel_outlined,
-                        color: primaryColor,
-                        size: 45,
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            hight = 0;
+                          });
+                        },
+                        child: Icon(
+                          Icons.cancel_outlined,
+                          color: primaryColor,
+                          size: 45,
+                        ),
                       ),
                       SizedBox(width: 10),
                       NavBarLogo(45),
